@@ -1,8 +1,9 @@
 def sequence(arr)
   result = []
   i = 0
-  while i < arr.size-1
-    missing = arr[i+1] - arr[i]
+  while i < arr.size-1  #прохождение по массиву
+    missing = arr[i+1] - arr[i] # узнаем разницу между соседними элементами
+    # если разница больше единицы ( есть пропущенное(ые) числа - выбраем их)
     (1..(missing-1)).each { |counter| result << arr[i] + counter } if missing > 1
     i += 1
   end
